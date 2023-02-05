@@ -1,6 +1,6 @@
 'use strict';
 var agents = [];
-var agentCount = 3000;
+var agentCount = 4000;
 var noiseScale = 300;
 var noiseStrength = 10;
 var overlayAlpha = 10;
@@ -47,7 +47,7 @@ class Agent{
     this.posOld = this.pos.copy();
     this.stepSize = random(1, 5);
     this.isOutside = false;
-    this.stepSize = 10;
+    this.stepSize = 5;
     let noiseX = map(this.pos.x, 0, width, 0, 0.5);
     let noiseY = map(this.pos.y, 0, height, 0, 0.5);
     this.angle =noise(noiseX,noiseY) * this.stepSize;
